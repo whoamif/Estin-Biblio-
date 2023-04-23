@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style1.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+     
+    <title>Document</title>
+  </head>
+  <body>
+    <section class="catalogue">
+      <div class="header">
+        <div class="navbar">
+          <div id="logo">
+            <img src="ell/Logo (2).svg">
+          </div>
+  
+          <div class="navigationoptions">
+            <a href="../Home page/index .html" class="nav-item">Home</a>
+            <a href="index1 .html" class="nav-item">catalog</a>
+            <a href="#suggest" class="nav-item">Suggest a Book</a>
+            <a href="#contact" class="nav-item">Contact Us</a>
+           
+          </div>
+          <div class="buttons">
+            <div class="search">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <img src="ell/whitepipeforminisearch.svg" id="whitepipe" />
+              <input
+                placeholder="Search..."
+                name="text"
+                type="text"
+                class="mini-search"
+              />
+            </div>
+            <div class="login">
+              <a href="#login">Log in</a>
+            </div>
+          </div>
+        </div>
+        <div class="pagehead">
+        
+          <p id="catalogtitle">Library’s Catalogue</p>
+          <div id="sortoptions">
+            <div class="sortoptionheader">
+              <p>Sort by:</p>
+              <div id="dropoptioncontent" class="dropoptioncontent">
+                <p> </p>
+              </div>
+              <img src="ell/dropbut.svg" id="dropdownbtn" />
+            </div>
+            
+            <div class="dropdown-content">
+            <img src="ell/Line 13.svg" id="sortdropline"/>
+             <ul>
+              <li data-value="relevance">Most Relevant</li>
+              <li data-value="Newest">Newest</li>
+              <li data-value="Most-borrowed">Most borrowed</li>
+             </ul>
+            
+            </div>
+          </div>
+        </div>
+        <hr class="seperatoline ">
+      </div>
+      
+     
+      <div class="pagecore">
+        <div class="filter">
+          <p><img src="ell/filter.svg" id="filtericon" /> Filter by :</p>
+          <br />
+          <div class="rating">
+            <p>Ratings : <img src="ell/line2.svg" /></p>
+
+            <ul class="rating-inside">
+              <li>
+                <input type="radio" value="fourstars" name="ratforyourbook" id="fourstars" class="rating-input">
+                <label for="fourstars" class="rating-label"><img src="ell/five.svg" id="ratingpic"></label>
+              </li>
+              <li>
+                <input type="radio" value="threestars" name="ratforyourbook" id="threestars" class="rating-input">
+                <label for="threestars" class="rating-label"><img src="ell/four.svg" id="ratingpic"></label>
+              </li>
+              <li>
+                <input type="radio" value="twostars" name="ratforyourbook" id="twostars" class="rating-input">
+                <label for="twostars" class="rating-label"><img src="ell/three.svg" id="ratingpic"></label>
+              </li>
+              <li>
+                <input type="radio" value="onestar" name="ratforyourbook" id="onestar" class="rating-input">
+                <label for="onestar" class="rating-label"><img src="ell/two.svg" id="ratingpic"></label>
+              </li>
+            </ul>
+          </div>
+          <div class="category">
+            <p>Category : <img src="ell/catline.svg" /></p>
+            <ul>
+              <li>
+                <input type="radio" value="math" name="category" id="math" />
+                <label for="math">Mathematics</label>
+              </li>
+              <li>
+                <input type="radio" value="archi" name="category" id="archi" />
+                <label for="archi">Architecture</label>
+              </li>
+              <li>
+                <input type="radio" value="language" name="category" id="language" />
+                <label for="language">Language</label>
+              </li>
+              <li>
+                <input type="radio" value="algorithms" name="category" id="algorithms" />
+                <label for="algorithms">Algorithms</label>
+              </li>
+            </ul>
+          </div>
+          <div class="size">
+            <p>Size : <img src="ell/sizeline.svg" /></p>
+            <ul>
+              <li>
+                <input
+                  type="radio"
+                  value="smallones"
+                  name="yourbooksize"
+                  id="smallones"
+                /><label for="smallones">0 - 250 pages</label>
+              </li>
+ 
+              <li>
+                <input
+                  type="radio"
+                  value="medueimones"
+                  name="yourbooksize"
+                  id="medueimones"
+                /><label for="medueimones">250 - 500 pages</label>
+              </li>
+   
+              <li>
+                <input
+                  type="radio"
+                  value="xmedueimones"
+                  name="yourbooksize"
+                  id="xmedueimones"
+                /><label for="xmedueimones">500 - 750 pages</label>
+              </li>
+
+              <li>
+                <input
+                  type="radio"
+                  value="largeones"
+                  name="yourbooksize"
+                  id="largeones"
+                /><label for="largeones">More than 750 pages</label>
+              </li>
+
+            </ul>
+          </div>
+          <div class="availability">
+            <p>Availability : <img src="ell/avlb.svg" id="line2" /></p>
+            <ul>
+              <li>
+                <input
+                  type="radio"
+                  value="available-only"
+                  name="seewhatyouneed"
+                  id="available-only"
+                /><label for="available-only">Available only</label>
+              </li>
+
+              <li>
+                <input
+                  type="radio"
+                  id="all-books"
+                  value="all-books"
+                  name="seewhatyouneed"
+                /><label for="all-books">All Books</label>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+        <div class="sortbooks">
+          <div class="bookdescription">
+            <img src="ell/book.svg" id="bookimg" />
+            <div class="bookinformations">
+              <div id="book-title">
+                <p id="booktitle">The Psychology Of Money</p>
+              </div>
+              <div id="bookAuthor-bookCategory">
+                <p id="book-det">By :</p>
+              <p id="book-option">author’s name</p>
+              <p id="book-det">In :</p>
+              <p id="book-option">books’ category</p>
+              </div>
+
+              <div class="book-descriptiondiv">
+                <div class="bookdescriptiontitle"><p>Description:</p></div>
+                <div id="book-description">
+                  <p>
+                    Suspendisse urna felis, fermentum ac lacus et, sagittis
+                    pharetra est. Suspendisse urna felis, fermentum ac lacus et,
+                    sagittis pharetra est. Suspendisse urna felis, fermentum ac
+                    lacus et, sagittis pharetra est.
+                  </p>
+
+                  <span id="span"></span>
+                
+                </div>
+              </div>
+              <div id="bookSize">
+                <p id="book-det">Size :</p>
+              <p id="book-option">430 pages</p>
+              </div>
+              <div id="book-rating">
+                <p id="book-det">
+                  Ratings : 
+                </p>
+                <img src="ell/four.svg" id="bookratingpic" />
+              </div>
+              <div id="book-availability">
+                <p id="book-det">Availability :</p>
+                <p id="book-available">Available</p>
+              </div>
+              <div class="reserveanddetails">
+                <a  id="reserve" data-modal-target="#reservation-confirm">Reserve</a>
+                <a href="../book deatils page/index3 .html" id="bookdetails"
+                  >See More Info
+                  <img src="ell/Vector.svg" id="seemorevectore" /></a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="bookdescription">
+            <img src="ell/book.svg" id="bookimg" />
+            <div class="bookinformations">
+              <div id="book-title">
+                <p id="booktitle">The Psychology Of Money</p>
+              </div>
+              <div id="bookAuthor-bookCategory">
+                <p id="book-det">By :</p>
+              <p id="book-option">author’s name</p>
+              <p id="book-det">In :</p>
+              <p id="book-option">books’ category</p>
+              </div>
+
+              <div class="book-descriptiondiv">
+                <div class="bookdescriptiontitle"><p>Description:</p></div>
+                <div id="book-description1">
+                  <p>
+                    Suspendisse urna felis, fermentum ac lacus et, sagittis
+                    pharetra est. Suspendisse urna felis, fermentum ac lacus et,
+                    sagittis pharetra est. Suspendisse urna felis, fermentum ac
+                    lacus et, sagittis pharetra est.
+                  </p>
+
+                  <span id="span1"></span>
+                
+                </div>
+              </div>
+              <div id="bookSize">
+                <p id="book-det">Size :</p>
+              <p id="book-option">430 pages</p>
+              </div>
+              <div id="book-rating">
+                <p id="book-det">
+                  Ratings : 
+                </p>
+                <img src="ell/four.svg" id="bookratingpic" />
+              </div>
+              <div id="book-availability">
+                <p id="book-det">Availability :</p>
+                <p id="book-available">Available</p>
+              </div>
+              <div class="reserveanddetails">
+                <a  id="reserve" data-modal-target="#reservation-confirm">Reserve</a>
+                <a href="../book deatils page/index3 .html" id="bookdetails"
+                  >See More Info
+                  <img src="ell/Vector.svg" id="seemorevectore" /></a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="bookdescription">
+            <img src="ell/book.svg" id="bookimg" />
+            <div class="bookinformations">
+              <div id="book-title">
+                <p id="booktitle">The Psychology Of Money</p>
+              </div>
+              <div id="bookAuthor-bookCategory">
+                <p id="book-det">By :</p>
+              <p id="book-option">author’s name</p>
+              <p id="book-det">In :</p>
+              <p id="book-option">books’ category</p>
+              </div>
+
+              <div class="book-descriptiondiv">
+                <div class="bookdescriptiontitle"><p>Description:</p></div>
+                <div id="book-description2">
+                  <p>
+                    Suspendisse urna felis, fermentum ac lacus et, sagittis
+                    pharetra est. Suspendisse urna felis, fermentum ac lacus et,
+                    sagittis pharetra est. Suspendisse urna felis, fermentum ac
+                    lacus et, sagittis pharetra est.
+                  </p>
+
+                  <span id="span2"></span>
+                
+                </div>
+              </div>
+              <div id="bookSize">
+                <p id="book-det">Size :</p>
+              <p id="book-option">430 pages</p>
+              </div>
+              <div id="book-rating">
+                <p id="book-det">
+                  Ratings : 
+                </p>
+                <img src="ell/four.svg" id="bookratingpic" />
+              </div>
+              <div id="book-availability">
+                <p id="book-det">Availability :</p>
+                <p id="book-available">Available</p>
+              </div>
+              <div class="reserveanddetails">
+                <a  id="reserve" data-modal-target="#reservation-confirm">Reserve</a>
+                <a href="../book deatils page/index3 .html" id="bookdetails"
+                  >See More Info
+                  <img src="ell/Vector.svg" id="seemorevectore" /></a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="bookdescription">
+            <img src="ell/book.svg" id="bookimg" />
+            <div class="bookinformations">
+              <div id="book-title">
+                <p id="booktitle">The Psychology Of Money</p>
+              </div>
+              <div id="bookAuthor-bookCategory">
+                <p id="book-det">By :</p>
+              <p id="book-option">author’s name</p>
+              <p id="book-det">In :</p>
+              <p id="book-option">books’ category</p>
+              </div>
+
+              <div class="book-descriptiondiv">
+                <div class="bookdescriptiontitle"><p>Description:</p></div>
+                <div id="book-description3">
+                  <p>
+                    Suspendisse urna felis, fermentum ac lacus et, sagittis
+                    pharetra est. Suspendisse urna felis, fermentum ac lacus et,
+                    sagittis pharetra est. Suspendisse urna felis, fermentum ac
+                    lacus et, sagittis pharetra est.
+                  </p>
+
+                  <span id="span3"></span>
+                
+                </div>
+              </div>
+              <div id="bookSize">
+                <p id="book-det">Size :</p>
+              <p id="book-option">430 pages</p>
+              </div>
+              <div id="book-rating">
+                <p id="book-det">
+                  Ratings : 
+                </p>
+                <img src="ell/four.svg" id="bookratingpic" />
+              </div>
+              <div id="book-availability">
+                <p id="book-det">Availability :</p>
+                <p id="book-available">Available</p>
+              </div>
+              <div class="reserveanddetails">
+                <a  id="reserve" data-modal-target="#reservation-confirm">Reserve</a>
+                <a href="../book deatils page/index3 .html" id="bookdetails"
+                  >See More Info
+                  <img src="ell/Vector.svg" id="seemorevectore" /></a
+                >
+              </div>
+            </div>
+          </div>
+          <img src="ell/Line1.svg" />
+        </div>
+      </div>
+      <div class="pagination">
+        <ul>
+         
+        </ul>
+      </div>
+      <div class="reservation-confirm" id="reservation-confirm">
+        <div class="resp-header">
+          <p class="book-reservation-title">Book Reservation</p>
+          <img src="ell/mightbookline.svg" id="linereservation">
+        </div>
+         <div class="qst-reservation">
+         <p >
+          Are you sure you want reserve this item ?
+         </p>
+         <div class="elemetns-yes-no">
+          <button href="#yes-reservation" id="yes-reservation">Yes</button>
+          <button id="no-reservation" data-close-button class="close-button">No</button>
+        </div>
+       </div>
+            
+       </div>
+       <div class="book-not-available" id="book-not-avblaible">
+        <div class="resp-header">
+          <p class="book-reservation-title">Book Reservation</p>
+          <img src="ell/mightbookline.svg" id="linereservation">
+        </div>
+         <div class="book-not-avblMsg">
+         <p >
+          The Book is <span>not available</span>  now
+         </p> <br>
+          <p id="sousresp">please wait until this book becomes available</p>
+       </div>
+       <div class="return-before-page">
+        <a href="#pageBefore" id="return-page-before"><i class="fa-solid fa-arrow-left"></i>Return</a>
+      </div>
+       </div>
+       <div  id="overlay"></div>
+      
+    </section>
+    <div class="container">
+      <div class="footer">
+        <div class="foots">
+          <div class="leftpart">
+            <img src="pics/site-web 1.svg" id="estinlogo" />
+            <p id="infos">
+              National road n° 75,<br />
+              Amizour – 06300 Bejaia,<br />
+              Algeria <br />
+              +213-34-824-916 <br />
+              <a href="mailto:contact@estin.dz" id="contactmail"
+                >contact@estin.dz</a
+              >
+            </p>
+          </div>
+          <div class="follow">
+            <p>Follow Us</p>
+            <div class="socialmedia">
+              <a href="https://estin.dz/" id="social">
+                <img src="ell/Website.svg" id="socialisons" />
+              </a>
+              <a href="https://www.facebook.com/profile.php?id=100035390036379">
+                <img src="ell/Facebook.svg" id="socialisons" />
+              </a>
+              <a href="https://www.linkedin.com/school/estin-bejaia/">
+                <img src="ell/LinkedIn.svg" id="socialisons" />
+              </a>
+              <a href="https://www.instagram.com/estin__bejaia/">
+                <img src="ell/Insta.svg" id="socialisons" />
+              </a>
+              <a href="https://www.youtube.com/@estinbejaia">
+                <img src="ell/Youtube.svg" id="socialisons" />
+              </a>
+            </div>
+          </div>
+          <div class="librarycontact">
+            <p>Contact The Library</p>
+            <form action="/submit-form.php" method="POST" id="forma">
+              <label for="name"></label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                required
+                placeholder="Name"
+              />
+
+              <label for="email"> </label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                placeholder="Email"
+              />
+
+              <label for="message"></label>
+              <textarea
+                id="message"
+                name="message"
+                required
+                placeholder="Message"
+              ></textarea>
+
+              <button type="submit" id="send">Send</button>
+            </form>
+          </div>
+        </div>
+        <div class="final">
+          <img src="pics/whiteline.svg" id="finalline" />
+          <div class="coprdiv">
+            <img src="ell/CopyRight.svg" id="copyright" />
+          <p>
+            Copyrights. All rights
+            reserved ESTIN - Béjaia
+          </p>
+          </div>
+        </div>
+        </div>
+      </div>
+    <script defer src="script1.js"></script>
+  </body>
+</html>
