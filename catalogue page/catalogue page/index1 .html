@@ -13,7 +13,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style1.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-     
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <title>Document</title>
   </head>
   <body>
@@ -25,13 +25,13 @@
           </div>
   
           <div class="navigationoptions">
-            <a href="../Home page/index .html" class="nav-item">Home</a>
-            <a href="index1 .html" class="nav-item">catalog</a>
-            <a href="#suggest" class="nav-item">Suggest a Book</a>
-            <a href="#contact" class="nav-item">Contact Us</a>
+            <a onclick="goToHomePage()" href="../Home page/index .html" class="nav-item">Home</a>
+            <a onclick="goToCatalogPage()"  href="index1 .html" class="nav-item" id="catalog-btn">catalog</a>
+            <a onclick="goToSuggest()" class="nav-item">Suggest a Book</a>
+            <a href="#container" >Contact Us</a>
            
           </div>
-          <div class="buttons">
+          <div class="buttons" id="mini-searching">
             <div class="search">
               <i class="fa-solid fa-magnifying-glass"></i>
               <img src="ell/whitepipeforminisearch.svg" id="whitepipe" />
@@ -43,10 +43,47 @@
               />
             </div>
             <div class="login">
-              <a href="#login">Log in</a>
+              <a onclick="goToLogin()">Log in</a>
             </div>
           </div>
         </div>
+        <div class="search-dropdown" id="search-dropdown">
+          <div class="search-section"id="return-search">
+          <img src="ell/returnpage.svg" class="fa-arrow-left-long" id="return-page-exit">
+          <input type="text" type="text" placeholder="Search .." class="dropsearch-placeholder" id="search-input">
+          <i class="fa-solid fa-magnifying-glass" id="search-btttn"></i>
+          <i class="fa-solid fa-xmark" id="clear-search" ></i>
+          </div>
+          <p id="recentsearchtitle">Recent Search History:</p>
+          <div class="recent-history">
+            
+            <div class="recent-search">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <p>Exercices algébre</p>
+            </div>
+            
+            
+            
+          </div>
+          <p id="filter-section-title">Filtre and Sort:</p>
+          <div class="fliter-sort">
+           
+            <div class="sort-section">
+              <div class="sort-category"><p>Mathematics</p></div>
+              <div class="sort-category"><p>Mathematics</p></div>
+            </div>
+            <div class="sort-section">
+              <div class="sort-category"><p>Mathematics</p></div>
+              <div class="sort-category">
+                <p>Mathematics</p>
+              </div>
+            </div>
+            <div class="sort-section">
+              <div class="sort-category"><p>Mathematics</p></div>
+              <div class="sort-category"><p>Mathematics</p></div>
+            </div>
+          </div>
+          </div>
         <div class="pagehead">
         
           <p id="catalogtitle">Library’s Catalogue</p>
@@ -194,10 +231,10 @@
                 <p id="booktitle">The Psychology Of Money</p>
               </div>
               <div id="bookAuthor-bookCategory">
-                <p id="book-det">By :</p>
-              <p id="book-option">author’s name</p>
-              <p id="book-det">In :</p>
-              <p id="book-option">books’ category</p>
+                <div id="book-det">By :</div>
+              <div id="book-option">author’s name</div>
+              <div id="book-det">In :</div>
+              <div id="book-option" class="categoryOption" >books’ category</div>
               </div>
 
               <div class="book-descriptiondiv">
@@ -226,7 +263,7 @@
               </div>
               <div id="book-availability">
                 <p id="book-det">Availability :</p>
-                <p id="book-available">Available</p>
+                <p id="true">Available</p>
               </div>
               <div class="reserveanddetails">
                 <a  id="reserve" data-modal-target="#reservation-confirm">Reserve</a>
@@ -238,26 +275,23 @@
             </div>
           </div>
           <div class="bookdescription">
-            <img src="ell/book.svg" id="bookimg" />
+            <img  id="bookimg" />
             <div class="bookinformations">
               <div id="book-title">
-                <p id="booktitle">The Psychology Of Money</p>
+                <p id="booktitle"></p>
               </div>
               <div id="bookAuthor-bookCategory">
-                <p id="book-det">By :</p>
-              <p id="book-option">author’s name</p>
-              <p id="book-det">In :</p>
-              <p id="book-option">books’ category</p>
+                <p id="book-det"></p>
+              <p id="book-option"></p>
+              <p id="book-det"></p>
+              <p id="book-option"></p>
               </div>
 
               <div class="book-descriptiondiv">
-                <div class="bookdescriptiontitle"><p>Description:</p></div>
+                <div class="bookdescriptiontitle"><p></p></div>
                 <div id="book-description1">
                   <p>
-                    Suspendisse urna felis, fermentum ac lacus et, sagittis
-                    pharetra est. Suspendisse urna felis, fermentum ac lacus et,
-                    sagittis pharetra est. Suspendisse urna felis, fermentum ac
-                    lacus et, sagittis pharetra est.
+                   
                   </p>
 
                   <span id="span1"></span>
@@ -265,8 +299,8 @@
                 </div>
               </div>
               <div id="bookSize">
-                <p id="book-det">Size :</p>
-              <p id="book-option">430 pages</p>
+                <p id="book-det"></p>
+              <p id="book-option"></p>
               </div>
               <div id="book-rating">
                 <p id="book-det">
@@ -275,7 +309,7 @@
                 <img src="ell/four.svg" id="bookratingpic" />
               </div>
               <div id="book-availability">
-                <p id="book-det">Availability :</p>
+                <p id="book-det"></p>
                 <p id="book-available">Available</p>
               </div>
               <div class="reserveanddetails">
@@ -338,7 +372,7 @@
             </div>
           </div>
           <div class="bookdescription">
-            <img src="ell/book.svg" id="bookimg" />
+            <img src="ell/book.svg" id="bookimg" class="bookimg" />
             <div class="bookinformations">
               <div id="book-title">
                 <p id="booktitle">The Psychology Of Money</p>
@@ -429,7 +463,7 @@
        <div  id="overlay"></div>
       
     </section>
-    <div class="container">
+    <div class="container" id="container">
       <div class="footer">
         <div class="foots">
           <div class="leftpart">
