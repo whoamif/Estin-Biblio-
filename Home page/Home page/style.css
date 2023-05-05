@@ -74,6 +74,7 @@ section {
    color: #EAF2EF;
    text-decoration: none;
    font-weight: 300;
+   cursor: pointer;
    box-shadow: 0 0 3px #F1413E;
    padding: .4em 1.8rem;
    background-color: #F1413E;
@@ -271,11 +272,13 @@ section {
 
 #search::placeholder {
    color: #2e4b42;
+   padding-top: 5%;
    font-size: x-large;
    align-items: center;
 }
 input[type="text"]{
   font-size: larger;
+  padding-top: 1%;
   align-items: center;
   color: #00000085;
   font-weight: 400;
@@ -283,6 +286,7 @@ input[type="text"]{
 .big-search::before {
    font-family: FontAwesome;
    font-size: xx-large;
+   padding-top: 1%;
    content: "\f002";
    color: #F1413E;
    padding-left: 3%;
@@ -290,6 +294,7 @@ input[type="text"]{
 
 #redpipe {
    width: 90px;
+   padding-top: 1%;
    height: 40px;
 }
 .leftpics{
@@ -928,15 +933,10 @@ label, input, textarea {
 }
 .recent-history{
    width: 80%;
-   margin-left: 12%;
-   margin-top: 1%;
+   margin-left: 13%;
    display: flex;
-   padding-top: 1%;
    flex-direction: column;
-   overflow-y: scroll;
-   height:200px ;
-   border-top: 1px solid #002533;
-   border-bottom:1px solid #002533;
+   height:270px ;
 }
 .recent-history p{
    font-weight: 500;
@@ -947,11 +947,11 @@ label, input, textarea {
 .recent-search{
    display: flex;
    align-items: center;
-   gap: 2%;
+   gap: 4%;
    padding-bottom: 1.5%;
    padding-top: 1%;
    padding-left: 2%;
-   height: 25%;
+   height: 20%;
 }
 .recent-search:hover{
    background-color: #00000020;

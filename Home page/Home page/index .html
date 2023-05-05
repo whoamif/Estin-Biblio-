@@ -12,7 +12,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <title>Estin Biblio Home-Page</title>
   </head>
 
@@ -24,10 +24,10 @@
           <div id="logo"><img src="ell/Logo (4).svg" ></div>
   
           <div class="navigationoptions">
-            <a href="index .html" class="nav-item">Home</a>
-            <a href="../catalogue page/index1 .html" class="nav-item">catalog</a>
-            <a href="#suggest" class="nav-item">Suggest a Book</a>
-            <a href="#contact" class="nav-item">Contact Us</a>
+            <a onclick="goToHomePage()" href="index .html" class="nav-item">Home</a>
+            <a onclick="goToCatalogPage()"  class="nav-item" id="catalog-btn">catalog</a>
+            <a onclick="gotToSuggestPage()" class="nav-item">Suggest a Book</a>
+            <a href="#container" >Contact Us</a>
            
           </div>
           <div class="buttons">
@@ -42,7 +42,7 @@
               />
             </div>
             <div class="login">
-              <a href="#login">Log in</a>
+              <a onclick="goToLogin()">Log in</a>
             </div>
           </div>
         </div>
@@ -294,7 +294,7 @@
         
       </div>
     </section>
-    <div class="container">
+    <div class="container" id="container">
       <div class="footer">
         <div class="foots">
           <div class="leftpart">
@@ -374,6 +374,6 @@
         </div>
         </div>
       </div>
-    <script defer src="scripthp.js"></script>
+    <script async src="scripthp.js"></script>
   </body>
 </html>
